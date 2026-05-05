@@ -1,0 +1,4 @@
+require("belfagor")
+
+
+print("Hello")

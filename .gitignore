@@ -1,0 +1,7 @@
+# Ignore external plugin source code
+zsh/.oh-my-zsh/
+tmux/.tmux/plugins/tpm/
+
+# Ignore common temporary/local files
+*.swp
+.DS_Store
