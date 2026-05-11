@@ -34,6 +34,12 @@ return {
 
         local preview_utils = require("telescope.previewers.utils")
         preview_utils.ts_highlighter = function(bufnr, ft)
+
+            -- GUARD: If filetype is nil or empty, don't even try to highlight
+            if not ft or ft == "" then
+                return false
+            end
+
             local lang = vim.treesitter.language.get_lang(ft) or ft
             if not lang or lang == "" then
                 return false
@@ -43,7 +49,7 @@ return {
         end
 
         local builtin = require('telescope.builtin')
-        vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+        vim.keymap.set('n', '<leader><leader>', builtin.find_files, {})
         vim.keymap.set('n', '<C-p>', builtin.git_files, {})
         vim.keymap.set('n', '<leader>pws', function()
             local word = vim.fn.expand("<cword>")

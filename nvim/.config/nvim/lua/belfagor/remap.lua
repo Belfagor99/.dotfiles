@@ -51,7 +51,7 @@ vim.keymap.set("n", "<leader>T", function()
     vim.cmd.startinsert()
 end)
 -- Easy escape from terminal mode
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+-- vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
 -- Use Alt + Arrow keys to resize windows
 vim.keymap.set("n", "<M-Up>", "<cmd>resize +2<cr>")
 vim.keymap.set("n", "<M-Down>", "<cmd>resize -2<cr>")

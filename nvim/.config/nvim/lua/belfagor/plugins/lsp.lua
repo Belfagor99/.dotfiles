@@ -44,7 +44,7 @@ return {
                 ensure_installed = {
                     "lua_ls", "rust_analyzer", --"gopls",
                     "vtsls", "tailwindcss", "clangd", "basedpyright",
-                    "bashls", "makefile",
+                    "bashls",
                 },
                 handlers = {
                     function(server_name)
